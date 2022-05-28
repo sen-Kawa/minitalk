@@ -6,9 +6,11 @@
 /*   By: kaheinz <kaheinz@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:01:07 by kaheinz           #+#    #+#             */
-/*   Updated: 2022/05/28 23:02:58 by kaheinz          ###   ########.fr       */
+/*   Updated: 2022/05/28 23:07:36 by kaheinz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "minitalk.h"
 
 int	main(void)
 {
