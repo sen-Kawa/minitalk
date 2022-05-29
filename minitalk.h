@@ -6,7 +6,7 @@
 /*   By: kaheinz <kaheinz@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:03:51 by kaheinz           #+#    #+#             */
-/*   Updated: 2022/05/28 23:05:41 by kaheinz          ###   ########.fr       */
+/*   Updated: 2022/05/29 03:39:27 by kaheinz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <signal.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include "libft/libft.h"
 
 
 #endif
