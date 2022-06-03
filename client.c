@@ -6,7 +6,7 @@
 /*   By: kaheinz <kaheinz@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 21:38:54 by kaheinz           #+#    #+#             */
-/*   Updated: 2022/06/03 22:57:47 by kaheinz          ###   ########.fr       */
+/*   Updated: 2022/06/04 00:54:21 by kaheinz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	global_sig;
 static void	send_str(char *str, pid_t pid)
 {
 	int	i;
-//	size_t	len;
+	int	len;
 	int	shift;
 
 	shift = 0;
-//	len = ft_strlen(str);
+	len = ft_strlen(str);
 	i = 0;
-	while (str[i] != '\0')
+	while (i <= len)
 	{
 		shift = 0;
 		while (shift <= 7)
@@ -49,11 +49,16 @@ static void	send_str(char *str, pid_t pid)
 
 void	handler_client(int sig, siginfo_t *info, void *context)
 {
-	(void) sig;
+//	(void) sig;
 	(void) info;
 	(void) context;
 
 	global_sig = 1;
+	if (sig == SIGUSR1)
+	{
+		ft_printf("Message succesfully sent\n");
+//		exit(EXIT_SUCCESS);
+	}
 }
 
 int	main(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: kaheinz <kaheinz@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:01:07 by kaheinz           #+#    #+#             */
-/*   Updated: 2022/06/03 22:55:39 by kaheinz          ###   ########.fr       */
+/*   Updated: 2022/06/04 00:51:37 by kaheinz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ void	handler_server(int sig, siginfo_t *info, void *context)
 	bits_received++;
 	if (bits_received == 8)
 	{
+	//	ft_printf("%c", c);
+		if (c == '\0')
+			ft_printf("\n");
 		ft_printf("%c", c);
+//		kill(info->si_pid, SIGUSR1);
 		c = 0;
 		bits_received = 0;
 	}
